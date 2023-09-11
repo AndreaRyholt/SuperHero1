@@ -3,25 +3,43 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Hold superhero = new Hold();
+        Scanner welcomeMenu = new Scanner(System.in);
 
-        Scanner input = new Scanner(System.in);
-        input.useDelimiter("[\\s,]+");
+        boolean runProgram = true;
 
-        //Hvordan sætter man input ind i array?
+        while (runProgram) {
+            System.out.println("Welcome to the SUPERHERO UNIVERSE!\n Choose your next step and enter a number:");
+            System.out.println("1 Create");
+            System.out.println("9 Close");
 
-            System.out.println("Enter a superhero: ");
-            String superheroName = input.next();
-            String name = input.next();
-            String egenskaber = input.next();
-            String art = input.next();
-            System.out.println("You have entered: " + superheroName + " " + name + " " + egenskaber + " " + art);
+            int menuNumber = welcomeMenu.nextInt();
+
+            if (menuNumber == 1) {
+                Hold superhero = new Hold();
+                Scanner superheroInput = new Scanner(System.in);
+                superheroInput.useDelimiter("[\\s,]+");
+
+                //Hvordan sætter man input ind i array?
+
+                System.out.println("Enter the superhero name: ");
+                String superheroName = superheroInput.next();
+                System.out.println("Enter the true name: ");
+                String name = superheroInput.next();
+                System.out.println("Enter superpower: ");
+                String abilities = superheroInput.next();
+                System.out.println("Enter which kind of creature the superhero is: ");
+                String type = superheroInput.next();
+                System.out.println("You have entered: " + superheroName + " " + name + " " + abilities + " " + type);
 
 
+                superhero.tilføjSuperhero("Superman", "Clark Kent", "flyve", "menneske");
+            }
 
-        superhero.tilføjSuperhero("Superman", "Clark Kent", "flyve", "menneske");
-
-
+            else if (menuNumber == 9) {
+                System.out.println("We hope to see you again soon");
+                runProgram = false;
+            }
+        }
 
     }
 }

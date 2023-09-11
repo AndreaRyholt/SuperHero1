@@ -2,14 +2,14 @@ public class Superhero {
 
     private String superheroName;
     private String name;
-    private String egenskaber;
-    private String art;
+    private String abilities;
+    private String type;
 
     public Superhero(String superheroName, String name, String attributer, String art){
         this.superheroName = superheroName;
         this.name = name;
-        this.egenskaber = attributer;
-        this.art = art;
+        this.abilities = attributer;
+        this.type = art;
     }
 
     //GET-metode
@@ -21,13 +21,14 @@ public class Superhero {
         return name;
     }
 
-    public String getEgenskaber() {
-        return egenskaber;
+    public String getAbilities() {
+        return abilities;
     }
 
-    public String getArt() {
-        return art;
+    public String getType() {
+        return type;
     }
+
 
 
 }
