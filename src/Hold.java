@@ -7,8 +7,8 @@ public class Hold {
     this.superheroListe = new Superhero[10];
     }
 
-    public void tilføjSuperhero(String superheroName, String name, String egenskaber) {
-        superheroListe[count++] = new Superhero(superheroName, name, egenskaber);
+    public void tilføjSuperhero(String superheroName, String name, String egenskaber, String art) {
+        superheroListe[count++] = new Superhero(superheroName, name, egenskaber, art);
     }
 
 }
