@@ -1,15 +1,17 @@
 public class Superhero {
 
     private String superheroName;
-    private String name;
+    private String firstName;
+    private String lastName;
     private String abilities;
     private String type;
 
-    public Superhero(String superheroName, String name, String attributer, String art){
+    public Superhero(String superheroName, String firstName, String lastName, String abilities, String type){
         this.superheroName = superheroName;
-        this.name = name;
-        this.abilities = attributer;
-        this.type = art;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.abilities = abilities;
+        this.type = type;
     }
 
     //GET-metode
