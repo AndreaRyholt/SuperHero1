@@ -15,7 +15,7 @@ public class Main {
             int menuNumber = welcomeMenu.nextInt();
 
             if (menuNumber == 1) {
-                Hold superhero = new Hold();
+                Database superhero = new Database();
                 Scanner superheroInput = new Scanner(System.in);
                 superheroInput.useDelimiter("[\\s,]+");
 
@@ -32,14 +32,17 @@ public class Main {
                 System.out.println("You have entered: " + superheroName + " " + name + " " + abilities + " " + type);
 
 
-                superhero.tilføjSuperhero("Superman", "Clark Kent", "flyve", "menneske");
+                superhero.addSuperhero("Superman", "Clark Kent", "flyve", "menneske");
             }
 
             else if (menuNumber == 9) {
                 System.out.println("We hope to see you again soon");
                 runProgram = false;
             }
+            //else (menuNumber != 1 || 9)
         }
 
     }
 }
+// while (!scanner.hasNextInt()){
+// sout "du skal indaaste et tal"}
