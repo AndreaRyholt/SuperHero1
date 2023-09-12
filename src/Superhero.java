@@ -17,8 +17,12 @@ public class Superhero {
         return superheroName;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
     }
 
     public String getAbilities() {
