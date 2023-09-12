@@ -23,16 +23,14 @@ public class Main {
 
                 System.out.println("Enter the superhero name: ");
                 String superheroName = superheroInput.next();
-                System.out.println("Enter the true name: ");
-                String name = superheroInput.next();
+                System.out.println("Enter the true name (first and last): ");
+                String firstName = superheroInput.next();
+                String lastName = superheroInput.next();
                 System.out.println("Enter superpower: ");
                 String abilities = superheroInput.next();
                 System.out.println("Enter which kind of creature the superhero is: ");
                 String type = superheroInput.next();
-                System.out.println("You have entered: " + superheroName + " " + name + " " + abilities + " " + type);
-
-
-                superhero.addSuperhero("Superman", "Clark Kent", "flyve", "menneske");
+                System.out.println("You have entered: " + superheroName + " " + firstName + lastName + " " + abilities + " " + type);
             }
 
             else if (menuNumber == 9) {

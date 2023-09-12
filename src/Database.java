@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Database {
 
     private Superhero[] superheroListe;
@@ -6,6 +8,8 @@ public class Database {
     public Database() {
     this.superheroListe = new Superhero[10];
     }
+
+    ArrayList<String> superhero = new ArrayList<>();
 
     public void addSuperhero(String superheroName, String name, String egenskaber, String art) {
         superheroListe[count++] = new Superhero(superheroName, name, egenskaber, art);
