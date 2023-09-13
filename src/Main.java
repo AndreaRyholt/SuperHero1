@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    public static final String BLUE_BOLD = "\033[1;34m";  // blå
     public static void main(String[] args) {
         Database superoDatabase = new Database();
         /*ArrayList superheroNames = new ArrayList();
@@ -17,7 +18,6 @@ public class Main {
         System.out.println("Welcome to the SUPERHERO UNIVERSE!");
 
         Scanner scanner = new Scanner(System.in);
-
         boolean runProgram = true;
 
         while (runProgram) {
@@ -58,7 +58,7 @@ public class Main {
                     System.out.println("Liste over superhelte:");
                     for (Superhero superhero1 : superheroListe) {
                         if (superhero1 != null)
-                            System.out.println(" Superhero: "  + superhero1.getSuperheroName() + "\n" + " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" + " Abilities: " + superhero1.getAbilities() + "\n" + " Type: " + superhero1.getType());
+                            System.out.println(BLUE_BOLD + " Superhero: "  + superhero1.getSuperheroName() + "\u001B[0m" + "\n" + " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" + " Abilities: " + superhero1.getAbilities() + "\n" + " Type: " + superhero1.getType());
                     }
                 }
             } else if (menuNumber == 9) {
