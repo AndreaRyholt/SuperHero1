@@ -47,6 +47,12 @@ public class Main {
                             System.out.println(BLUE_BOLD + " Superhero: "  + superhero1.getSuperheroName() + "\u001B[0m" + "\n" + " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" + " Abilities: " + superhero1.getAbilities() + "\n" + " Type: " + superhero1.getType());
                     }
                 }
+            } else if (menuNumber == 3) {
+                //scanner + læs input
+
+                System.out.println(superheroDatabase.findSuperhero(/*scanner input*/));
+
+
             } else if (menuNumber == 9) {
                 System.out.println("We hope to see you again soon");
                 runProgram = false;
