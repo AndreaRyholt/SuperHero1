@@ -14,7 +14,6 @@ public class Superhero {
         this.type = type;
     }
 
-    //GET-metode
     public String getSuperheroName() {
         return superheroName;
     }

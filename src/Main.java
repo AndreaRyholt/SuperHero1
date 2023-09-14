@@ -2,18 +2,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static final String BLUE_BOLD = "\033[1;34m";  // blå
+    public static final String BLUE_BOLD = "\033[1;34m";
     public static void main(String[] args) {
        Database superheroDatabase = new Database();
-        /*ArrayList superheroNames = new ArrayList();
-        superheroNames.add("Superman");
-        superheroNames.add("Batman");
-        superheroNames.add("Spiderman");
-
-
-        System.out.println(superheroNames.get(0));
-        System.out.println(superheroNames.get(1));
-        System.out.println(superheroNames.get(2));*/
 
         System.out.println("Welcome to the SUPERHERO UNIVERSE!");
 
@@ -27,16 +18,10 @@ public class Main {
             System.out.println("3 Search superhero");
             System.out.println("9 Close");
 
-            //int menuNumber = welcomeMenu.nextInt();
             int menuNumber = scanner.nextInt();
 
             if (menuNumber == 1) {
                 Scanner superheroInput = new Scanner(System.in);
-
-
-                //superheroInput.useDelimiter("[\\s,]+");
-
-                //Hvordan sætter man input ind i array?
 
                 System.out.println("Enter the superhero name: ");
                 String superheroName = superheroInput.next();
@@ -50,8 +35,6 @@ public class Main {
                 System.out.println("You have entered: " + superheroName + " " + firstName + lastName + " " + abilities + " " + type);
 
                 superheroDatabase.addSuperhero(superheroName, firstName, lastName, abilities, type);
-
-                // superhelte bliver tilføjet og kan vises på liste, men gemmes ikke i programmet til at køre igen
 
             } else if (menuNumber == 2) {
                 ArrayList<Superhero> superheroListe = superheroDatabase.getSuperheroListe();
@@ -70,15 +53,7 @@ public class Main {
             }
 
           //  public Superhero searchByName(superhero)
-                //else (menuNumber != 1 || 9)
             }
 
         }
     }
-
-
-
-//String name  = scanner.nextLine()
-// while (!scanner.hasNextInt()){
-// sout "du skal indaaste et tal"}
-//String name  = scanner.nextLine()
