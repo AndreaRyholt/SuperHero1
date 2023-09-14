@@ -32,12 +32,12 @@ public class Main {
                 String abilities = superheroInput.next();
                 System.out.println("Enter which kind of creature the superhero is: ");
                 String type = superheroInput.next();
-                System.out.println("You have entered: " + superheroName + " " + firstName + lastName + " " + abilities + " " + type);
+                System.out.println("The superhero you have added: " + superheroName + " " + firstName + lastName + " " + abilities + " " + type);
 
                 superheroDatabase.addSuperhero(superheroName, firstName, lastName, abilities, type);
 
             } else if (menuNumber == 2) {
-                ArrayList<Superhero> superheroListe = superheroDatabase.getSuperheroListe();
+                ArrayList<Superhero> superheroListe = superheroDatabase.getSuperheroList();
                 if (superheroListe.isEmpty()) {
                     System.out.println("No superhero found");
                 } else {
