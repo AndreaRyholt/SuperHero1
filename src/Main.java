@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static final String BLUE_BOLD = "\033[1;34m";  // blå
     public static void main(String[] args) {
-        Database superoDatabase = new Database();
+       Database superheroDatabase = new Database();
         /*ArrayList superheroNames = new ArrayList();
         superheroNames.add("Superman");
         superheroNames.add("Batman");
@@ -24,6 +24,7 @@ public class Main {
             System.out.println("\nChoose your next step and enter a number:");
             System.out.println("1 Create");
             System.out.println("2 See complete list of superhero");
+            System.out.println("3 Search superhero");
             System.out.println("9 Close");
 
             //int menuNumber = welcomeMenu.nextInt();
@@ -48,14 +49,16 @@ public class Main {
                 String type = superheroInput.next();
                 System.out.println("You have entered: " + superheroName + " " + firstName + lastName + " " + abilities + " " + type);
 
-                superoDatabase.addSuperhero(superheroName, firstName, lastName, abilities, type);
+                superheroDatabase.addSuperhero(superheroName, firstName, lastName, abilities, type);
+
+                // superhelte bliver tilføjet og kan vises på liste, men gemmes ikke i programmet til at køre igen
 
             } else if (menuNumber == 2) {
-                ArrayList<Superhero> superheroListe = superoDatabase.getSuperheroListe();
+                ArrayList<Superhero> superheroListe = superheroDatabase.getSuperheroListe();
                 if (superheroListe.isEmpty()) {
-                    System.out.println("Ingen superhelte.");
+                    System.out.println("No superhero found");
                 } else {
-                    System.out.println("Liste over superhelte:");
+                    System.out.println("Complete list of superheroes:");
                     for (Superhero superhero1 : superheroListe) {
                         if (superhero1 != null)
                             System.out.println(BLUE_BOLD + " Superhero: "  + superhero1.getSuperheroName() + "\u001B[0m" + "\n" + " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" + " Abilities: " + superhero1.getAbilities() + "\n" + " Type: " + superhero1.getType());
@@ -64,16 +67,15 @@ public class Main {
             } else if (menuNumber == 9) {
                 System.out.println("We hope to see you again soon");
                 runProgram = false;
+            }
 
-           /* } else if (menuNumber == 2) {
-                String[] superhero = {0..10};
-            }*/
+          //  public Superhero searchByName(superhero)
                 //else (menuNumber != 1 || 9)
             }
 
         }
     }
-}
+
 
 
 //String name  = scanner.nextLine()
