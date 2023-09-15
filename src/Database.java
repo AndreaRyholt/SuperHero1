@@ -14,12 +14,14 @@ public class Database {
         superheroList.add(new Superhero("Spiderman", "Peter", " Parker", "Web", "Human"));
 
     }
-    public String getSuperheroList();
-    return superheroList;
 
     public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String creature) {
         Superhero superhero = new Superhero(superheroName, firstName, lastName, abilities, creature);
         superheroList.add(superhero);
+    }
+
+    public ArrayList<Superhero> getSuperheroList() {
+        return superheroList;
     }
 
     public ArrayList<String> findSuperhero(String findSuperheroName) {
@@ -34,4 +36,5 @@ public class Database {
         return searchSHN;
 
         }
+
     }
