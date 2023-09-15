@@ -35,15 +35,3 @@ public class Database {
 
         }
     }
-
-
-    //Hvad er det her?
-   /* public ArrayList<Superhero> getSuperheroList () {
-        return superheroList;*/
-
-
-//public Superhero searchSuperhero (String superheroName) {
-//for (Superhero superhero : Superherolist) {
-//if (superhero ! = null superhero.getsuperheroname
-//return superhero;
-}
