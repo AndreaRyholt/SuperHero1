@@ -14,6 +14,8 @@ public class Database {
         superheroList.add(new Superhero("Spider Man", "Tom", " Holland", "Web", "Human"));
 
     }
+    public String getSuperheroList();
+    return superheroList;
 
     public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String creature) {
         Superhero superhero = new Superhero(superheroName, firstName, lastName, abilities, creature);
@@ -30,11 +32,12 @@ public class Database {
             }
         }
         return searchSHN;
-
+        // return null;
 
 
         }
     }
+
 
     //Hvad er det her?
    /* public ArrayList<Superhero> getSuperheroList () {
