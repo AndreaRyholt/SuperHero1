@@ -25,7 +25,7 @@ public class UserInterface {
             menuNumber = scanner.nextInt();
 
 
-            Scanner searchSuperhero = null;
+            //Scanner searchSuperhero = null;
             String findSuperhero = null;
             if (menuNumber == 1) {
                 Scanner superheroInput = new Scanner(System.in);
@@ -102,13 +102,27 @@ public class UserInterface {
 
                 Superhero editSuperhero = null;
 
-               for (Superhero superhero : superheroList) {
-                   if (superheroList.isEmpty()) {
-                       System.out.println("This superhero does not exist.");
-                   }
-                   if (superhero.getSuperheroName().toLowerCase().contains(findSuperhero.toLowerCase())) {
-                       return searchSuperhero;
-                       for (Superhero superhero : searchSuperhero)
+
+                String findSuperhero = searchSuperhero.next();
+
+
+                if (superheroList.isEmpty()){
+                    System.out.println("This superhero does not exist in our superhero library.");
+
+                }else if (findSuperhero.contains(findSuperhero)){
+
+                }
+
+
+
+
+
+
+
+                 /* if (superhero.getSuperheroName().toLowerCase().contains(findSuperhero.toLowerCase())) {
+                       return searchSuperhero;*/
+
+                      /* if (Superhero.getSuperheroName().toLowerCase().contains(findSuperhero.toLowerCase())) {
                            System.out.println(superhero.getSuperheroName() + "\n" +
                                    superhero.getFirstName() + superhero.getLastName() + "\n" +
                                    superhero.getAbilities() + "\n" +
