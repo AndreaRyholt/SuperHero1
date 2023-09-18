@@ -36,6 +36,23 @@ public class Superhero {
         return type;
     }
 
+    public void setSuperheroName(String superheroName) {
+        this.superheroName = superheroName;
+    }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAbilities(String abilities) {
+        this.abilities=abilities;
+    }
+
+    public void setType(String type) {
+        this.type=type;
+    }
 }

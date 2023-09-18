@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
     private int count = 0;
@@ -36,5 +37,20 @@ public class Database {
         return searchSHN;
 
         }
+
+    public void editSuperhero(String superheroName, String newSuperheroName, String newFirstName, String newLastName, String newAbilities, String newType){
+        for (Superhero superhero:superheroList) {
+            if (superhero!=null && superhero.getSuperheroName().equalsIgnoreCase(superheroName)){
+                superhero.setSuperheroName(newSuperheroName);
+                superhero.setFirstName(newFirstName);
+                superhero.setLastName(newLastName);
+                superhero.setAbilities(newAbilities);
+                superhero.setType(newType);
+                System.out.println("Superhero information updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Superhero not found");
+    }
 
     }
