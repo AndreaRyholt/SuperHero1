@@ -22,6 +22,11 @@ public class UserInterface {
             System.out.println("4 Edit superhero");
             System.out.println("9 Close");
 
+            if (!scanner.hasNextInt()) {
+                String text = scanner.next();
+                System.out.printf(text + " is not an eligible number. Try again. ");
+            }
+
             menuNumber = scanner.nextInt();
 
 
