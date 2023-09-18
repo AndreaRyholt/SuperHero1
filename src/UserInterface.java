@@ -6,9 +6,9 @@ public class UserInterface {
 
     public void startProgram() {
         Database superheroDatabase = new Database();
+        Scanner searchSuperhero = new Scanner(System.in);
 
         System.out.println("Welcome to the SUPERHERO UNIVERSE!");
-
         Scanner scanner = new Scanner(System.in);
         boolean runProgram = true;
 
@@ -63,17 +63,43 @@ public class UserInterface {
                                     " Type: " + superhero1.getType());
                     }
                 }
-
             } else if (menuNumber == 3) {
-                searchSuperhero = new Scanner(System.in);
-                System.out.println("Search for superheroes:");
+                System.out.println("Enter the superhero name");
                 findSuperhero = searchSuperhero.next();
-                System.out.println(superheroDatabase.findSuperhero(findSuperhero));
 
-            } else if (menuNumber == 4) {
+                //Superhero findSuperhero = superheroDatabase.superheroList();
+                if (findSuperhero != null) {
+                    System.out.println("Superhero found");
+                    System.out.println("Name " + Superhero.getSuperheroName());
+                    System.out.println("True Name " + findSuperhero.getFirstName() + " " + findSuperhero.getLastName());
+                    System.out.println("Abilities " + findSuperhero.getAbilities());
+                    System.out.println("Type " + findSuperhero.getType());
+
+                } else {
+                    System.out.println("Superhero not found");
+                }
+
+
+
+
+
+
+                /*System.out.println("Search for superheroes:");
+                findSuperhero = searchSuperhero.next();
+
+               if (searchSuperhero.hasNext()) {
+               System.out.println(superheroDatabase.findSuperhero(findSuperhero));
+
+            } else if (!searchSuperhero.hasNextShort()) {
+                System.out.printf(findSuperhero + " not found  ");
+
+            }*/
+
+        }else if (menuNumber == 4) {
                 //redigering
                 System.out.println("Enter the name of the superhero you want to edit");
                 String superheroList = searchSuperhero.next();
+
                 Superhero editSuperhero = null;
 
                for (Superhero superhero : superheroList) {
@@ -88,16 +114,14 @@ public class UserInterface {
                                    superhero.getAbilities() + "\n" +
                                    superhero.getType());
                    }
+                   editSuperhero = searchSuperhero.getSuperhero();
+                   searchSuperhero.nextLine();*/
                }
-               editSuperhero = searchSuperhero.getSuperheroList();
-                searchSuperhero.nextLine();
-
-
 
                 // Superhero editSuperhero = superheroDatabase.findSuperhero(findSuperhero);
 
 
-            } else if (menuNumber == 9) {
+             else if (menuNumber == 9) {
                 System.out.println("We hope to see you again soon");
                 runProgram = false;
             }
